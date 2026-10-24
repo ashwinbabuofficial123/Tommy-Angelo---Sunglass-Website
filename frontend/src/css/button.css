@@ -1,0 +1,68 @@
+.button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  color: transparent;
+  position: relative;
+  width: fit-content;
+  height: max-content;
+}
+.button.login-btn .login-text {
+  background: none;
+  color: #ffffff;
+  -webkit-text-fill-color: #fff;
+  font-weight: 400;
+}
+.button.login-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 32px;
+  background-color: #000;
+}
+.button .btn-span {
+  background: linear-gradient(to bottom, #000, #fff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.button .btn-span.btnSpan {
+  background: linear-gradient(to bottom, #fff, #bebebe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.3s ease-in-out;
+}
+.btnClass:hover .btnSpan {
+  background: none;
+  -webkit-text-fill-color: #000;
+  color: #000;
+}
+.btnClass {
+  background-color: #00000000;
+  border: 2px solid #fff;
+  transition: 0.3s ease-in-out;
+}
+.btnClass:hover {
+  background-color: #ffffff;
+  border: 2px solid #fff;
+}
+.discoverBtn {
+  background-color: #101010;
+}
+
+.discoverSpan {
+  background: #fff;
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+@media (max-width: 1440px) {
+  .button {
+    font-size: clamp(1vw, 5rem, 16px);
+  }
+}

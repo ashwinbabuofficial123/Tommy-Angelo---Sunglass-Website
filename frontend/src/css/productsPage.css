@@ -1,0 +1,174 @@
+.products-container {
+  width: 100%;
+  height: 100%;
+}
+.top-hero-wrap-- {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .-top-text-wrap {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    span,
+    h1,
+    p {
+      color: #fff;
+      font-family: "Google Sans", sans-serif;
+    }
+    h1 {
+      font-family: "Gasoek One", sans-serif;
+      font-weight: 400;
+    }
+  }
+}
+.page-path {
+  padding: 2% 5%;
+  font-family: "Iosevka Charon", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(44, 44, 44);
+}
+.filter-and-products {
+  display: flex;
+  align-items: flex-start; /* stops children stretching to full height */
+
+  .filter-sidebar {
+    /* use your real filter class name */
+    position: sticky;
+    top: 100px; /* gap for your navbar, or 0 if none */
+    flex-shrink: 0;
+  }
+
+  .products-wrapp-- {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-inline: 5vw;
+    /* remove position: sticky and top */
+  }
+}
+.filter-and-products {
+  width: 100%;
+  display: flex;
+  align-items: flex-start; /* stops children stretching to full height */
+
+  .filter-sidebar {
+    /* use your real filter class name */
+    position: sticky;
+    top: 100px; /* gap for your navbar, or 0 if none */
+    flex-shrink: 0;
+  }
+}
+/* ---------- Large screens (laptop/desktop) ---------- */
+@media (min-width: 1440px) {
+  .top-hero-wrap-- {
+    height: 360px;
+  }
+  .products-wrapp-- {
+    padding-inline: 4vw;
+  }
+}
+
+/* ---------- Tablet landscape (<= 1024px) ---------- */
+@media (max-width: 1024px) {
+  .top-hero-wrap-- {
+    height: 260px;
+  }
+  .top-hero-wrap-- img {
+    height: 100%;
+  }
+  .top-hero-wrap-- .-top-text-wrap h1 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+  }
+  .page-path {
+    padding: 3% 5%;
+    font-size: 15px;
+  }
+  .filter-and-products .filter-sidebar {
+    top: 80px;
+  }
+  .filter-and-products .products-wrapp-- {
+    gap: 20px;
+    padding-inline: 3vw;
+  }
+}
+
+/* ---------- Tablet portrait (<= 768px) ---------- */
+@media (max-width: 768px) {
+  .top-hero-wrap-- {
+    height: 220px;
+  }
+  .top-hero-wrap-- .-top-text-wrap {
+    left: 6%;
+    right: 6%;
+  }
+  .top-hero-wrap-- .-top-text-wrap h1 {
+    font-size: clamp(1.5rem, 6vw, 2.1rem);
+  }
+  .top-hero-wrap-- .-top-text-wrap p,
+  .top-hero-wrap-- .-top-text-wrap span {
+    font-size: 14px;
+  }
+  .page-path {
+    padding: 4% 5%;
+    font-size: 14px;
+  }
+
+  /* sidebar goes on top, products below */
+  .filter-and-products {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  .filter-and-products .filter-sidebar {
+    position: static;
+    width: 100%;
+    padding-inline: 5vw;
+    margin-bottom: 16px;
+  }
+  .filter-and-products .products-wrapp-- {
+    position: absolute;
+    top: 5%;
+    gap: 16px;
+    padding-inline: 5vw;
+  }
+}
+
+/* ---------- Phone (<= 480px) ---------- */
+@media (max-width: 480px) {
+  .top-hero-wrap-- {
+    height: 180px;
+  }
+  .top-hero-wrap-- .-top-text-wrap h1 {
+    font-size: 1.4rem;
+  }
+  .top-hero-wrap-- .-top-text-wrap p {
+    display: none; /* remove if you want to keep the text */
+  }
+  .page-path {
+    font-size: 13px;
+    padding: 5% 5%;
+  }
+  .filter-and-products .products-wrapp-- {
+    gap: 12px;
+    padding-inline: 4vw;
+  }
+}
+
+/* ---------- Small phone (<= 360px) ---------- */
+@media (max-width: 360px) {
+  .top-hero-wrap-- {
+    height: 160px;
+  }
+  .top-hero-wrap-- .-top-text-wrap h1 {
+    font-size: 1.2rem;
+  }
+}

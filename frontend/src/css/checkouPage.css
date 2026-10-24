@@ -1,0 +1,759 @@
+.checkout-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.top-text-wrap {
+  width: 100%;
+  padding-inline: 5.813vw;
+  padding-bottom: 24px;
+  padding-top: 6.25vw;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  .navigate-route {
+  }
+  .main-checkout-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    h1 {
+      font-family: "Gasoek One", sans-serif;
+      font-weight: 400;
+    }
+  }
+}
+.checkout-section-wrap {
+  padding-inline: 5.813vw;
+  display: flex;
+  gap: 32px;
+}
+.checkout-form-fill {
+  width: 70%;
+}
+.checkout-map {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  align-items: center;
+  .check-status {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Google Sans", sans-serif;
+  }
+  .line {
+    width: 390px;
+    height: 2px;
+    background-color: black;
+  }
+}
+.checkout-forms {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  .label-wrap {
+    label {
+      font-family: "Gasoek One", sans-serif;
+      font-weight: 500;
+    }
+  }
+  .addres-form {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+    flex-direction: column;
+    textarea {
+      padding-left: 8px;
+      padding-top: 10px;
+      font-family: "Google Sans", sans-serif;
+      border: 1px solid #6b6a6a;
+      border-radius: 4px;
+      height: 60px;
+    }
+    textarea::placeholder {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      font-size: 12px;
+      color: #6b6a6a;
+      font-weight: 500;
+    }
+  }
+}
+.form-wrap-main {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  input {
+    padding-left: 8px;
+    font-family: "Google Sans", sans-serif;
+    border: 1px solid #6b6a6a;
+    border-radius: 4px;
+    height: 60px;
+  }
+  input::placeholder {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 12px;
+    color: #6b6a6a;
+    font-weight: 500;
+  }
+}
+.state-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+  width: 100%;
+  font-family: "Google Sans", sans-serif;
+  select {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    font-family: "Google Sans", sans-serif;
+    color: #6b6a6a;
+    border: 1px solid #6b6a6a;
+    border-radius: 4px;
+  }
+  input {
+    padding: 10px;
+    border-radius: 4px;
+    color: #6b6a6a;
+    border: 1px solid #6b6a6a;
+    font-family: "Google Sans", sans-serif;
+  }
+}
+.pincode-wrap {
+  display: flex;
+  justify-content: space-between;
+  input {
+    height: 60px;
+    font-family: "Google Sans", sans-serif;
+  }
+  span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    p {
+      font-family: "Google Sans", sans-serif;
+      font-size: 12px;
+    }
+  }
+}
+.paymentMethod {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  label {
+    font-family: "Gasoek One", sans-serif;
+    font-weight: 500;
+    p {
+      font-family: "Google Sans", sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+    }
+  }
+  .payment-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .payment-wrap-card {
+    padding: 18px 18px;
+    display: flex;
+    background-color: #fff;
+    position: relative;
+    z-index: 3;
+    gap: 8px;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #f1efef;
+    span {
+      font-family: "Google Sans", sans-serif;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .paymentIcon {
+      width: 30px;
+    }
+  }
+}
+
+.credit-card-wrap {
+  width: 100%;
+  background-color: #f1f1f1;
+  height: 100%;
+  margin-top: -10px;
+  display: flex;
+  padding: 20px;
+  border: 1px solid rgb(230, 227, 227);
+  border-top: none;
+  justify-content: center;
+  animation: card 0.3s ease-in-out;
+  .card--ui {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    border-radius: 16px;
+    height: 250px;
+    background: linear-gradient(to right, #1a244f, #2d3868, #1a244f);
+    border: 1px solid rgb(34, 33, 33);
+  }
+  .wifi-tap {
+    transform: rotate(90deg);
+    filter: invert(1);
+  }
+  .input-wrap-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    input {
+      width: 100%;
+      height: 30px;
+      background-color: #00000000;
+      border: none;
+      font-family: "Google Sans", sans-serif;
+      font-size: 24px;
+    }
+    input::placeholder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #dddbdb;
+    }
+    span {
+      display: flex;
+      gap: 32px;
+      width: 50%;
+      p {
+        font-family: "Google Sans", sans-serif;
+        font-size: 12px;
+        color: #fff;
+      }
+      input {
+        width: 100%;
+        height: 30px;
+        background-color: #00000000;
+        border: none;
+        font-size: 12px;
+      }
+    }
+  }
+}
+.placeorder-- {
+  padding: 16px 16px;
+  background-color: black;
+  border: none;
+  color: #fff;
+  font-family: "Google Sans", sans-serif;
+  cursor: pointer;
+}
+.order-summery-checkout {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  border-radius: 24px;
+  border: 1px solid rgb(228, 228, 228);
+  padding: 24px;
+  position: fixed;
+  background-color: #fff;
+  right: 5.813vw;
+  top: 13.021vw;
+  label {
+    font-family: "Gasoek One", sans-serif;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+  }
+  .cartItems {
+    width: 100%;
+    .cart-wrap-check {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      position: relative;
+      span {
+        position: absolute;
+        right: 20px;
+        bottom: 40px;
+        font-family: "Google Sans", sans-serif;
+        font-weight: 600;
+      }
+      .img-wrap-check {
+        width: 160px;
+        height: 160px;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .text--wrap-check-- {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        h1,
+        p {
+          font-size: 12px;
+          font-family: "Google Sans", sans-serif;
+        }
+      }
+    }
+  }
+}
+.total-grand {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+  align-items: end;
+  border-top: 1px solid #e4e2e2;
+  span {
+    font-family: "Google Sans", sans-serif;
+    font-weight: 500;
+  }
+  span:nth-child(2) {
+    font-size: 20px;
+  }
+}
+.check-cart {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+  font-family: "Google Sans", sans-serif;
+}
+.returnPage {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  text-align: center;
+  height: 56.25vw;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.order-complete {
+  display: flex;
+  width: 100%;
+  height: 1200px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  position: absolute;
+  gap: 32px;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: #fff;
+
+  h1 {
+    color: #000;
+  }
+}
+@keyframes card {
+  0% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/* =====================================================================
+   RESPONSIVE LAYER (everything below is new; original code is above)
+   Needs in index.html <head>:
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+   Device reference
+   ≥1920  Full HD / 2K / 4K monitors
+   1200–1439  Laptops (1280, 1366, 1440 MacBook)
+   ≤1199  iPad landscape (1024 / 1133 / 1180 / 1194)  -> stacked layout
+   ≤1023  iPad / iPad Air / iPad Pro portrait (768–834)
+   ≤767   Large phones landscape, small tablets, Fold
+   ≤480   Pixel, Galaxy S, iPhone Pro Max / Plus (412–430)
+   ≤393   iPhone 12–16, Pixel 7/8
+   ≤360   Small Androids, iPhone SE (320–375)
+   ===================================================================== */
+
+/* ---------- Fluid base (applies to every device) ---------- */
+.top-text-wrap .main-checkout-wrap h1 {
+  font-size: clamp(1.75rem, 1.1rem + 2.6vw, 3.5rem);
+  line-height: 1.1;
+}
+.checkout-forms .label-wrap label,
+.paymentMethod label {
+  font-size: clamp(14px, 0.8rem + 0.35vw, 18px);
+}
+.checkout-map .check-status {
+  width: clamp(34px, 3.4vw, 50px);
+  height: clamp(34px, 3.4vw, 50px);
+  flex-shrink: 0;
+  font-size: clamp(13px, 0.7rem + 0.3vw, 16px);
+}
+.order-summery-checkout label {
+  font-size: clamp(15px, 0.85rem + 0.4vw, 20px);
+}
+.placeorder-- {
+  font-size: clamp(14px, 0.85rem + 0.25vw, 17px);
+}
+
+/* ---------- ≥1200px : fixed summary must never run off the screen ---------- */
+@media (min-width: 1200px) {
+  .order-summery-checkout {
+    max-height: calc(100vh - 13.021vw - 24px);
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+}
+
+/* ---------- ≥1920px : Full HD / 2K / 4K ---------- */
+@media (min-width: 1920px) {
+  .order-summery-checkout .cartItems .cart-wrap-check .img-wrap-check {
+    width: 180px;
+    height: 180px;
+  }
+  .order-summery-checkout .cartItems .cart-wrap-check .text--wrap-check-- h1,
+  .order-summery-checkout .cartItems .cart-wrap-check .text--wrap-check-- p {
+    font-size: 14px;
+  }
+}
+
+/* ---------- ≤1439px : laptops (1280, 1366, 1440 MacBook) ---------- */
+@media (max-width: 1439px) {
+  .checkout-section-wrap {
+    gap: 24px;
+  }
+  .checkout-form-fill {
+    width: 64%;
+  }
+  .checkout-map {
+    width: 90%;
+  }
+  .checkout-map .line {
+    width: auto;
+    flex: 1 1 0;
+    min-width: 12px;
+    max-width: 390px;
+  }
+  .order-summery-checkout {
+    width: 30%;
+    padding: 20px;
+  }
+  .order-summery-checkout .cartItems .cart-wrap-check .img-wrap-check {
+    width: 110px;
+    height: 110px;
+  }
+  .order-summery-checkout .cartItems .cart-wrap-check span {
+    right: 12px;
+    bottom: 26px;
+  }
+  .credit-card-wrap .card--ui {
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+    min-height: 220px;
+    aspect-ratio: 500 / 250;
+  }
+}
+
+/* ---------- ≤1199px : iPad landscape – stack form and summary ---------- */
+@media (max-width: 1199px) {
+  .top-text-wrap {
+    padding-top: 9vw;
+  }
+  .checkout-section-wrap {
+    flex-direction: column;
+    gap: 28px;
+    padding-bottom: 32px;
+  }
+  .checkout-form-fill {
+    width: 100%;
+  }
+  .checkout-map {
+    width: 100%;
+  }
+  /* summary leaves the fixed position and flows under the form */
+  .order-summery-checkout {
+    position: static;
+    width: 100%;
+    max-height: none;
+    overflow: visible;
+    right: auto;
+    top: auto;
+  }
+  .order-summery-checkout .cartItems .cart-wrap-check .img-wrap-check {
+    width: 120px;
+    height: 120px;
+  }
+  .order-summery-checkout .cartItems .cart-wrap-check span {
+    right: 16px;
+    bottom: 30px;
+  }
+  .order-complete {
+    height: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+}
+
+/* ---------- ≤1023px : iPad / iPad Air / iPad Pro portrait (768 – 1024) ---------- */
+@media (max-width: 1023px) {
+  .top-text-wrap {
+    padding-inline: 4.5vw;
+    padding-top: 12vw;
+  }
+  .checkout-section-wrap {
+    padding-inline: 4.5vw;
+  }
+  .checkout-form-fill .placeorder-- {
+    padding: 14px 24px;
+  }
+  .credit-card-wrap {
+    padding: 16px;
+  }
+  .credit-card-wrap .card--ui {
+    padding: 20px;
+  }
+  .credit-card-wrap .input-wrap-card input {
+    font-size: clamp(18px, 3.4vw, 24px);
+  }
+  .returnPage {
+    height: auto;
+    min-height: 70vh;
+    min-height: 70svh;
+    padding-inline: 4.5vw;
+  }
+}
+
+/* ---------- ≤767px : large phones (landscape), small tablets, Fold ---------- */
+@media (max-width: 767px) {
+  .checkout-map {
+    margin-bottom: 18px;
+  }
+  .form-wrap-main input,
+  .addres-form textarea,
+  .state-wrap select,
+  .state-wrap input,
+  .pincode-wrap input {
+    font-size: 16px; /* stops iOS Safari zooming on focus */
+  }
+  .form-wrap-main input,
+  .state-wrap select,
+  .pincode-wrap input {
+    height: 54px;
+  }
+  .pincode-wrap {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .paymentMethod .payment-wrap-card {
+    padding: 14px;
+    flex-wrap: wrap;
+  }
+  .credit-card-wrap .input-wrap-card span input {
+    font-size: 16px;
+  }
+  .checkout-form-fill .placeorder-- {
+    width: 100%;
+    padding: 16px;
+  }
+  .order-summery-checkout {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .total-grand {
+    padding: 16px 0;
+  }
+  .order-complete {
+    padding-inline: 16px;
+    gap: 20px;
+  }
+  .order-complete h1 {
+    font-size: clamp(1.5rem, 6vw, 2.25rem);
+  }
+  .returnPage {
+    gap: 20px;
+  }
+}
+
+/* ---------- ≤480px : Pixel, Galaxy S, iPhone Pro Max/Plus (412–430) ---------- */
+@media (max-width: 480px) {
+  .top-text-wrap {
+    padding-inline: 16px;
+    padding-top: 88px;
+    padding-bottom: 16px;
+  }
+  .checkout-section-wrap {
+    padding-inline: 16px;
+    gap: 22px;
+  }
+  .checkout-map .check-status {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+  }
+
+  /* single-column forms */
+  .form-wrap-main {
+    grid-template-columns: 1fr;
+  }
+  .state-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .paymentMethod .payment-wrap-card .paymentIcon {
+    width: 26px;
+  }
+
+  /* bank-card look scales to the screen */
+  .credit-card-wrap {
+    padding: 12px;
+  }
+  .credit-card-wrap .card--ui {
+    padding: 16px;
+    border-radius: 14px;
+    min-height: 190px;
+    aspect-ratio: auto;
+    gap: 14px;
+  }
+  .credit-card-wrap .input-wrap-card input {
+    font-size: 18px;
+  }
+  .credit-card-wrap .input-wrap-card span {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .order-summery-checkout {
+    padding: 16px;
+    border-radius: 16px;
+  }
+  .order-summery-checkout .cartItems .cart-wrap-check .img-wrap-check {
+    width: 90px;
+    height: 90px;
+  }
+  .order-summery-checkout .cartItems .cart-wrap-check span {
+    right: 6px;
+    bottom: 18px;
+  }
+  .total-grand span:nth-child(2) {
+    font-size: 18px;
+  }
+  .returnPage {
+    min-height: 80vh;
+    min-height: 80svh;
+  }
+}
+
+/* ---------- ≤393px : iPhone 12–16, Pixel 7/8 ---------- */
+@media (max-width: 393px) {
+  .order-summery-checkout .cartItems .cart-wrap-check .img-wrap-check {
+    width: 84px;
+    height: 84px;
+  }
+  .credit-card-wrap .card--ui {
+    min-height: 180px;
+  }
+}
+
+/* ---------- ≤360px : small Androids, iPhone SE (320–375), Fold cover screen ---------- */
+@media (max-width: 360px) {
+  .top-text-wrap {
+    padding-inline: 12px;
+    padding-top: 80px;
+  }
+  .checkout-section-wrap {
+    padding-inline: 12px;
+  }
+  .checkout-map .check-status {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .credit-card-wrap {
+    padding: 8px;
+  }
+  .credit-card-wrap .card--ui {
+    padding: 14px;
+  }
+  .credit-card-wrap .input-wrap-card input {
+    font-size: 16px;
+  }
+  .order-summery-checkout {
+    padding: 14px;
+  }
+  .order-summery-checkout .cartItems .cart-wrap-check .img-wrap-check {
+    width: 72px;
+    height: 72px;
+  }
+  .paymentMethod label p {
+    font-size: 11px;
+  }
+}
+
+/* ---------- Short landscape phones (e.g. 667x375, 844x390, 932x430) ---------- */
+@media (max-height: 500px) and (orientation: landscape) {
+  .top-text-wrap {
+    padding-top: 72px;
+  }
+  .returnPage,
+  .order-complete {
+    min-height: 100vh;
+    min-height: 100svh;
+    height: auto;
+  }
+}
+
+/* ---------- Touch devices: bigger tap targets ---------- */
+@media (hover: none) and (pointer: coarse) {
+  .form-wrap-main input,
+  .state-wrap select,
+  .state-wrap input,
+  .pincode-wrap input {
+    min-height: 48px;
+  }
+  .checkout-form-fill .placeorder-- {
+    min-height: 48px;
+  }
+}
+
+/* ---------- Step progress states ---------- */
+.checkout-map .check-status {
+  background-color: #d9d9d9;
+  color: #8a8a8a;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+.checkout-map .line {
+  background-color: #d9d9d9;
+  transition: background-color 0.3s ease;
+}
+.checkout-map .check-status.active {
+  background-color: #000;
+  color: #fff;
+}
+.checkout-map .line.active {
+  background-color: #000;
+}

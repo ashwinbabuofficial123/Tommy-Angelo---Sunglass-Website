@@ -1,0 +1,252 @@
+.product-card-wrp {
+  width: 23vw;
+  height: 33.854vw;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 16px;
+  border: 1px solid rgb(212, 211, 211);
+  overflow: hidden;
+  box-shadow: 1px 1px 12px 0px #d4d2d2;
+  position: relative;
+  cursor: pointer;
+}
+.product-card-wrp:hover .img-wrap-prduct img {
+  transform: scale(1.1);
+}
+.quik-inter-wrap-- {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 2;
+  .quik-inter {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #524e4e;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wishlist {
+    stroke: #524e4e;
+  }
+  .wishlist.filled {
+    fill: red;
+    color: red;
+    stroke: none;
+  }
+}
+.img-wrap-prduct {
+  width: 100%;
+  overflow: hidden;
+  img {
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+  }
+}
+.color-wrap {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+}
+.colorBox {
+  width: 20px;
+  height: 20px;
+  border-radius: 24px;
+}
+.colorBox.green {
+  background-color: green;
+}
+.colorBox.black {
+  background-color: rgb(3, 3, 3);
+}
+.price-wrap--- {
+  display: flex;
+  gap: 16px;
+  span {
+    font-size: 24px;
+    font-family: "Google Sans", sans-serif;
+    font-weight: 600;
+  }
+  span:nth-child(2) {
+    font-weight: 400;
+    text-decoration: line-through;
+    color: #b3b1b1;
+  }
+}
+.logo-wrap-pro {
+  img {
+    width: 4vw;
+  }
+}
+.text-wwrap--product {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px;
+  h1 {
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+}
+/* ---------- Large screens (>= 1440px) ---------- */
+@media (min-width: 1440px) {
+  .product-card-wrp {
+    width: 20vw;
+    height: auto;
+  }
+  .logo-wrap-pro img {
+    width: 3vw;
+  }
+}
+
+/* ---------- Tablet landscape (<= 1024px) ---------- */
+@media (max-width: 1024px) {
+  .product-card-wrp {
+    width: 28vw;
+    height: auto; /* card grows with content */
+    border-radius: 14px;
+  }
+  .quik-inter-wrap-- {
+    top: 16px;
+    right: 16px;
+  }
+  .quik-inter-wrap-- .quik-inter {
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    border-radius: 20px;
+  }
+  .color-wrap {
+    bottom: 16px;
+    right: 16px;
+  }
+  .logo-wrap-pro img {
+    width: 6vw;
+  }
+  .text-wwrap--product {
+    padding: 18px;
+    gap: 6px;
+  }
+  .text-wwrap--product h1 {
+    font-size: 20px;
+  }
+  .price-wrap--- {
+    gap: 12px;
+  }
+  .price-wrap--- span {
+    font-size: 20px;
+  }
+}
+
+/* ---------- Tablet portrait (<= 768px) : 2 cards per row ---------- */
+@media (max-width: 768px) {
+  .product-card-wrp {
+    width: calc(50% - 8px);
+    height: auto;
+    min-width: 0;
+  }
+  .img-wrap-prduct img {
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+  .quik-inter-wrap-- {
+    top: 12px;
+    right: 12px;
+  }
+  .quik-inter-wrap-- .quik-inter {
+    width: 38px;
+    height: 38px;
+    padding: 7px;
+  }
+  .color-wrap {
+    bottom: 12px;
+    right: 12px;
+  }
+  .colorBox {
+    width: 18px;
+    height: 18px;
+  }
+  .logo-wrap-pro img {
+    width: 12vw;
+    max-width: 60px;
+  }
+  .text-wwrap--product {
+    padding: 14px;
+  }
+  .text-wwrap--product h1 {
+    font-size: 17px;
+    line-height: 1.25;
+  }
+  .price-wrap--- {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .price-wrap--- span {
+    font-size: 17px;
+  }
+}
+
+/* ---------- Phone (<= 480px) ---------- */
+@media (max-width: 480px) {
+  .product-card-wrp {
+    width: calc(50% - 6px);
+    border-radius: 12px;
+    gap: 6px;
+  }
+  .quik-inter-wrap-- {
+    top: 8px;
+    right: 8px;
+  }
+  .quik-inter-wrap-- .quik-inter {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+    border-width: 1.5px;
+  }
+  .color-wrap {
+    bottom: 8px;
+    right: 8px;
+  }
+  .colorBox {
+    width: 14px;
+    height: 14px;
+  }
+  .logo-wrap-pro img {
+    width: 16vw;
+    max-width: 52px;
+  }
+  .text-wwrap--product {
+    padding: 10px;
+    gap: 4px;
+  }
+  .text-wwrap--product h1 {
+    font-size: 14px;
+  }
+  .price-wrap--- {
+    gap: 8px;
+  }
+  .price-wrap--- span {
+    font-size: 14px;
+  }
+}
+
+/* ---------- Small phone (<= 360px) : 1 card per row ---------- */
+@media (max-width: 360px) {
+  .product-card-wrp {
+    width: 100%;
+  }
+  .text-wwrap--product h1 {
+    font-size: 16px;
+  }
+  .price-wrap--- span {
+    font-size: 16px;
+  }
+  .logo-wrap-pro img {
+    width: 56px;
+  }
+}

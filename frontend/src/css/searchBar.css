@@ -1,0 +1,108 @@
+.searchContainer {
+  display: none;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.411);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+.searchContainer.open {
+  display: flex;
+  opacity: 1;
+  z-index: 3;
+}
+.searchContainer.open .searchBar {
+  display: flex;
+}
+.searchBar {
+  display: none;
+  width: 800px;
+  height: 400px;
+  background-color: aliceblue;
+  align-self: center;
+  padding: 24px;
+  position: relative;
+  flex-direction: column;
+  label {
+    font-family: "Google Sans", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: rgb(36, 36, 36);
+  }
+  .search-wrap {
+    width: 100%;
+    position: relative;
+    input {
+      width: 100%;
+      height: 50px;
+      border: 1px solid rgb(100, 100, 100);
+      border-radius: 8px;
+      padding: 16px;
+      font-family: "Google Sans", sans-serif;
+    }
+    input:focus {
+      outline: 2px solid rgba(206, 205, 205, 0.4);
+    }
+    button {
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: none;
+      background-color: black;
+      color: #fff;
+      font-size: 24px;
+      position: absolute;
+      right: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+}
+.products-show {
+  padding: 32px 0px;
+  display: flex;
+  gap: 24px;
+  overflow: scroll;
+  scrollbar-width: none;
+  position: relative;
+  label {
+    font-size: 24px;
+    position: absolute;
+  }
+}
+.result-card {
+  margin-top: 32px;
+  flex-shrink: 0;
+  padding: 16px;
+  width: 200px;
+  height: max-content;
+  border-radius: 16px;
+  box-shadow: 1px 1px 1px 1px #000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  img {
+    width: 60%;
+    object-fit: cover;
+  }
+  h1,
+  p {
+    font-size: 16px;
+  }
+}
+.close-btn-search {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  padding: 4px 8px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

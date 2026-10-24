@@ -1,0 +1,941 @@
+.homepage {
+  width: 100%;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
+.heroSection {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #000, #111111);
+  text-align: center;
+  position: relative;
+  overflow-y: hidden;
+}
+.hero-text-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.brandLogo {
+  width: 100%;
+  text-align: center;
+}
+.brandLogo img {
+  width: 16vw;
+}
+.heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 400px;
+  text-align: center;
+  h1 {
+    font-family: "Gasoek One", sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #bebebe);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 4vw;
+    transition: 0.3s ease-in;
+  }
+  p {
+    font-size: 16px;
+    color: #fff;
+  }
+}
+.btn-wrp {
+  display: flex;
+  width: 100%;
+  padding-inline: 6vw;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 24px;
+  transition: 0.3 ease-in;
+}
+.heroImage {
+  width: 89.333vw;
+  position: absolute;
+  bottom: 0;
+}
+.heroImage img {
+  width: 100%;
+  object-fit: cover;
+}
+.heroImgRes {
+  display: none;
+}
+.heroImgRes img {
+  width: 100%;
+}
+.break-point {
+  display: none;
+}
+.categories-sec-wrap {
+  width: 100%;
+
+  padding: 100px 0px;
+}
+.cat-text-wrap {
+  text-align: center;
+
+  h1 {
+    font-family: "Gasoek One", sans-serif;
+    font-size: 13.021vw;
+  }
+}
+.cat-box-wrp {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: visible;
+}
+.cat-box-wrp .cat-box {
+  width: 100%;
+  height: 33.854vw;
+  background-color: #bebebe;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3.5vw 2vw;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.cat-box-wrp .cat-box:hover {
+  transform: translateY(-15%);
+  z-index: 2;
+}
+.catImage {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cat-Image {
+  width: 100%;
+  object-fit: cover;
+}
+.text-wrp-cat {
+  color: #fff;
+  z-index: 2;
+  h1 {
+    font-size: 56px;
+    font-weight: 600;
+  }
+  p {
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+.shop-btn {
+  padding: 8px 16px;
+  width: max-content;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  position: absolute;
+  right: 100%;
+  color: #fff;
+  cursor: pointer;
+}
+.text-new-wrap {
+  padding: 0px 65px;
+  position: relative;
+  h1 {
+    font-family: "Gasoek One", sans-serif;
+    font-size: 64px;
+    color: #151515;
+    font-weight: 400;
+  }
+  p {
+    color: black;
+    /* background: linear-gradient(to bottom, #000, #efdada);
+    background-clip: text;
+    -webkit-background-clip: text; */
+    font-size: 16px;
+  }
+}
+.product-container-wrp {
+  display: flex;
+  padding: 50px 60px;
+  width: 100%;
+  overflow: hidden;
+  transform: translateX(0);
+  gap: 16px;
+}
+.slide-wrap {
+  position: absolute;
+  right: 8vw;
+  bottom: 0;
+
+  display: flex;
+  gap: 32px;
+  button {
+    height: max-content;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #fff;
+    border: none;
+    text-decoration: none;
+    color: #202020;
+    font-family: "Google Sans", sans-serif;
+    cursor: pointer;
+  }
+}
+
+.active {
+  color: red;
+}
+.active-link {
+  color: #f70404;
+}
+.feautured-product {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  overflow-x: hidden;
+}
+.feauturedHead {
+  font-family: "Gasoek One", sans-serif;
+  font-size: 13.021vw;
+  background: linear-gradient(to bottom, #000000, #8b8b8b);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 0.3s ease-in;
+  text-align: center;
+}
+.feat-txt-wrp {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 160px;
+  gap: 8px;
+  h1 {
+    font-family: "Gasoek One", sans-serif;
+    font-size: 64px;
+    color: #080808;
+  }
+  p {
+    font-size: 16px;
+    border: none;
+  }
+}
+.brand-wrp-ft {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.brand-wrp-ft img {
+  width: 100px;
+  height: auto;
+}
+.main-feat-wrp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.featImg {
+  width: 560px;
+}
+.featImg img {
+  width: 100%;
+  object-fit: cover;
+}
+.scroll-features {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  margin-top: 100px;
+  transition: 0.3s ease-in-out;
+  animation: scroll 20s linear infinite;
+}
+
+.scroll-features .featBox {
+  width: 450px;
+  height: 450px;
+  padding: 24px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.imgFeat {
+  width: 100%;
+}
+
+.imgFeat img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 24px;
+}
+.featTextWrp {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  h1 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+.brands-sec {
+  h1 {
+    font-size: 64px;
+    font-family: "Gasoek One", sans-serif;
+    color: #141414;
+  }
+}
+
+.card-wrp {
+  display: flex;
+  width: 100%;
+}
+.card-wrp .card-brand {
+  width: 100%;
+  height: 36.458vw;
+  display: flex;
+  align-items: end;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  h1 {
+    font-family: "Iosevka Charon", monospace;
+    font-size: 56px;
+    font-weight: 600;
+    color: #fff;
+    z-index: 2;
+  }
+}
+
+.brnd-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: 0.6s ease-in-out;
+}
+.card-wrp .card-brand:hover .brnd-img {
+  transform: scale(1.1);
+}
+.lifestyleImages-wrp {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  height: 100%;
+  width: 100%;
+  border: #000 1px solid;
+}
+.lifeStyle-textWrp {
+  margin-top: 120px;
+  padding: 0px 65px;
+  h1 {
+    font-family: "Gasoek One", sans-serif;
+    font-size: 64px;
+    color: #151515;
+    font-weight: 400;
+  }
+  p {
+    color: black;
+    /* background: linear-gradient(to bottom, #000, #efdada);
+    background-clip: text;
+    -webkit-background-clip: text; */
+    font-size: 16px;
+  }
+}
+.reviewCard-wrp {
+  width: 100%;
+  height: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding-inline: 65px;
+
+  gap: 16px;
+}
+.reviewImages-grid {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.reviewImages-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.8s ease;
+  cursor: pointer;
+}
+.reviewImages-grid:hover img {
+  scale: 1.1;
+}
+/* LEFT - Full height */
+.reviewImages-grid.gridBox1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+/* CENTER - TOP */
+.reviewImages-grid.gridBox2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+/* CENTER - BOTTOM */
+.reviewImages-grid.gridBox3 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+/* RIGHT - Full height */
+.reviewImages-grid.gridBox4 {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+}
+.viewmore {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000088;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+.viewmore:hover {
+  backdrop-filter: blur(5px);
+}
+
+.cardReviewWrp {
+  display: flex;
+  position: relative;
+  gap: 32px;
+  padding-inline: 120px;
+  width: 100%;
+  margin-top: 60px;
+}
+.textReviewWrp {
+  margin-top: 120px;
+  padding: 0px 65px;
+  h1 {
+    font-family: "Gasoek One", sans-serif;
+    font-size: 64px;
+    color: #151515;
+    font-weight: 400;
+  }
+  p {
+    color: black;
+    /* background: linear-gradient(to bottom, #000, #efdada);
+    background-clip: text;
+    -webkit-background-clip: text; */
+    font-size: 16px;
+  }
+}
+.carousel-btn-wrp {
+  display: flex;
+  justify-content: space-between;
+  width: 94%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+.carousel-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #f0ecec;
+  box-shadow: 1px 1px 4px 0px #7e7c7c;
+}
+.cardReview {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid #fff;
+  box-shadow: 2px 2px 1px 2px #383838;
+}
+
+@media (max-width: 1440px) {
+  .heroSection {
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px;
+    flex-direction: column;
+  }
+  .heroImage {
+    display: none;
+  }
+  .heroImgRes {
+    position: absolute;
+    width: 500px;
+    display: flex;
+    right: 3.125vw;
+    width: 50vw;
+  }
+  .break-point {
+    display: block;
+  }
+  .heroText {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 40px;
+    p {
+      font-size: 12px;
+    }
+    h1 {
+      font-size: 80px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .brandLogo {
+    width: 100%;
+    text-align: start;
+  }
+  .btn-wrp {
+    justify-content: flex-start;
+    top: 65%;
+    gap: 32px;
+    padding: 0px;
+    margin-top: 24px;
+    width: max-content;
+
+    bottom: 20%;
+  }
+  .hero-text-sec {
+    position: absolute;
+    top: 200px;
+  }
+  .brandLogo img {
+    width: 200px;
+  }
+  .cat-box-wrp {
+    grid-template-columns: repeat(2, 1fr);
+    aspect-ratio: 1/1;
+    padding-inline: 10px;
+    gap: 8px;
+  }
+  .cat-box-wrp .cat-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    position: relative;
+  }
+  .cat-box-wrp .cat-box:hover {
+    transform: translate(0%);
+  }
+  .categories-sec-wrap {
+    padding: 50px 0px;
+  }
+
+  .card-wrp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    aspect-ratio: 1/1;
+  }
+  .card-wrp .card-brand {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .brands-sec {
+    h1 {
+      font-size: 64px;
+      font-family: "Gasoek One", sans-serif;
+      color: #141414;
+    }
+  }
+  .featImg {
+    width: 360px;
+  }
+  .feat-txt-wrp {
+    margin-left: 7vw;
+    h1 {
+      font-size: 54px;
+      color: #080808;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .scroll-features .featBox {
+    width: 350px;
+    height: 350px;
+    margin-bottom: 100px;
+  }
+  .imgFeat {
+    width: 100%;
+  }
+  .featTextWrp {
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .slide-wrap {
+    display: none;
+  }
+
+  .product-container-wrp {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* hide scrollbar, Firefox */
+  }
+
+  .product-container-wrp::-webkit-scrollbar {
+    display: none; /* hide scrollbar, Chrome/Safari */
+  }
+}
+@media (max-width: 866px) {
+  .btn-wrp {
+    top: 70%;
+  }
+  .text-wrp-cat {
+    h1 {
+      font-size: 32px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  .scroll-features .featBox {
+    width: 200px;
+  }
+  .feat-txt-wrp {
+    margin-top: 10vw;
+    gap: 16px;
+    h1 {
+      font-size: 40px;
+      color: #080808;
+    }
+    p {
+      font-size: 14px;
+      border: #000 1px solid;
+      width: 300px;
+    }
+  }
+  .brand-wrp-ft img {
+    width: 60px;
+    height: auto;
+  }
+  .card-wrp .card-brand {
+    h1 {
+      font-size: 32px;
+    }
+  }
+  .brands-sec {
+    h1 {
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+  }
+  .text-new-wrap {
+    padding: 0px 24px;
+    h1 {
+      font-family: "Gasoek One", sans-serif;
+      font-size: 32px;
+      color: #151515;
+      font-weight: 400;
+    }
+    p {
+      color: black;
+
+      font-size: 12px;
+    }
+  }
+  .lifeStyle-textWrp {
+    padding: 0px 24px;
+    h1 {
+      font-family: "Gasoek One", sans-serif;
+      font-size: 32px;
+      color: #151515;
+      font-weight: 400;
+    }
+    p {
+      color: black;
+      font-size: 16px;
+    }
+    margin-bottom: 0px;
+  }
+  .reviewCard-wrp {
+    display: flex;
+    gap: 16px;
+
+    width: 100%;
+    padding-inline: 24px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+
+    /* hide scrollbar */
+    scrollbar-width: none;
+  }
+  .textReviewWrp {
+    padding: 0px 24px;
+    h1 {
+      font-family: "Gasoek One", sans-serif;
+      font-size: 32px;
+      color: #151515;
+      font-weight: 400;
+    }
+    p {
+      color: black;
+      /* background: linear-gradient(to bottom, #000, #efdada);
+    background-clip: text;
+    -webkit-background-clip: text; */
+      font-size: 16px;
+    }
+  }
+  .lifestyleImages-wrp {
+    height: 600px;
+  }
+  .reviewCard-wrp::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reviewImages-grid {
+    flex: 0 0 500px;
+    width: 100%;
+    height: 300px;
+    background-color: #151515;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Remove old grid positioning */
+  .reviewImages-grid.gridBox1,
+  .reviewImages-grid.gridBox2,
+  .reviewImages-grid.gridBox3,
+  .reviewImages-grid.gridBox4 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .textReviewWrp {
+    margin-top: 0px;
+  }
+  .cardReview {
+    width: 100%;
+    height: 200px;
+  }
+  .cardReview:nth-child(3),
+  .cardReview:nth-child(4) {
+    display: none;
+  }
+  .featTextWrp {
+    h1 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  .main-feat-wrp {
+    h1 {
+      font-size: 32px;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .text-wrp-cat {
+    h1 {
+      font-size: 32px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  .text-new-wrap {
+    padding: 0px 24px;
+    h1 {
+      font-family: "Gasoek One", sans-serif;
+      font-size: 32px;
+      color: #151515;
+      font-weight: 400;
+    }
+    p {
+      color: black;
+
+      font-size: 12px;
+    }
+  }
+  .product-container-wrp {
+    padding: 20px;
+  }
+  .footer-links-sec {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    h1 {
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #dc143c;
+    }
+  }
+  .footer-Links-wrp-sec {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 60px;
+  }
+  .carousel-btn {
+    font-size: 16px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 1px 1px 4px 0px #7e7c7c;
+  }
+  .cardReviewWrp {
+  }
+  .cardReview {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    box-shadow: 2px 2px 1px 2px #383838;
+  }
+}
+/*  */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.review-track {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 4px 6px 12px 4px;
+  scrollbar-width: none;
+}
+.review-track::-webkit-scrollbar {
+  display: none;
+}
+
+.review-track .cardReview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  flex: 0 0 calc((100% - 64px) / 3); /* 64px = two gaps of 32px */
+  height: auto;
+  min-height: 300px;
+  padding: 32px;
+  font-family: "Google Sans", sans-serif;
+}
+
+.review-stars {
+  font-size: 24px;
+  color: #f5a623;
+  letter-spacing: 4px;
+}
+
+.review-text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.review-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.review-avatar {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.review-info {
+  display: flex;
+  flex-direction: column;
+  h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  span {
+    font-size: 14px;
+    color: grey;
+  }
+}
+
+@media (max-width: 866px) {
+  .review-track {
+    gap: 16px;
+  }
+  .review-track .cardReview {
+    flex: 0 0 85%;
+    min-height: 220px;
+    padding: 20px;
+  }
+  .review-track .cardReview:nth-child(3),
+  .review-track .cardReview:nth-child(4) {
+    display: flex;
+  }
+  .review-text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 650px) {
+  .review-track .cardReview {
+    min-height: 200px;
+    height: auto;
+  }
+  .review-text {
+    font-size: 14px;
+  }
+  .review-stars {
+    font-size: 18px;
+  }
+}

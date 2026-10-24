@@ -1,0 +1,155 @@
+.navbar {
+  width: 100%;
+  padding: 10px 120px;
+  background-color: rgb(0, 0, 0);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  position: fixed;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: 0.3s ease-in-out;
+}
+.logo {
+  justify-self: start;
+}
+
+.scrollNav {
+  background-color: #141414;
+  transition: 0.3s ease-in;
+  padding: 0px 120px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.scrollNav .logo {
+  justify-self: start;
+  width: 150px;
+  padding: 5px;
+}
+.scrollNav .logo img {
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+.ham {
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  display: none;
+}
+.ham .ham-line {
+  background-color: #ffffff;
+  width: 100%;
+  height: 2px;
+}
+.ham .ham-line:nth-child(3) {
+  background-color: #ffffff;
+  width: 80%;
+}
+.logo {
+  justify-self: start;
+  cursor: pointer;
+}
+.logo img {
+  width: clamp(100px, 8vw + 60px, 160px);
+}
+.navLinks {
+  display: flex;
+  gap: 80px;
+}
+.navLinks .links {
+  background: linear-gradient(to bottom, #ffffff, #bebebe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 16px;
+}
+.navLinks .links:hover {
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: #ffffff;
+  color: #ffffff;
+}
+.functional-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-self: end;
+}
+.my-acc {
+  padding: 8px 16px;
+  background-color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  color: #313131;
+  border-radius: 8px;
+}
+@media (max-width: 1440px) {
+  .navbar {
+    padding: 8px 60px;
+    justify-content: start;
+    gap: 40px;
+  }
+  .navLinks {
+    position: absolute;
+    flex-direction: column;
+    width: 70%;
+    height: 100vh;
+    background-color: #0e0e0e;
+    top: 100%;
+    left: 0;
+    transform: translateX(-100%);
+    padding: 50px;
+    transition: 0.5s ease-in-out;
+  }
+  .navLinks.nav-links {
+    transform: translateX(0%);
+  }
+  .navLinks .links {
+    font-size: 24px;
+  }
+  .functional-links {
+    position: absolute;
+    right: 60px;
+  }
+  .my-acc {
+    display: none;
+  }
+  .ham {
+    display: flex;
+  }
+}
+@media (max-width: 650px) {
+  .navbar {
+    padding: 16px;
+    gap: 54px;
+  }
+  .ham {
+    width: 24px;
+    gap: 4px;
+  }
+  .logo {
+    position: absolute;
+    left: 70px;
+  }
+  .scrollNav .logo {
+    position: absolute;
+    left: 70px;
+    width: 100px;
+  }
+  .functional-links {
+    position: absolute;
+    right: 16px;
+    gap: 12px;
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

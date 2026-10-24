@@ -1,0 +1,90 @@
+.filter-container {
+  max-width: 350px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 24px;
+  padding-left: 5vw;
+  z-index: 3;
+  label {
+    font-size: 24px;
+    font-family: "Google Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}
+.filterBtn {
+  padding: 8px 24px;
+  border-radius: 24px;
+  border: 2px solid rgb(204, 203, 203);
+  background-color: #fff;
+  font-family: "Google Sans", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 1px 0px #bbbaba;
+  display: none;
+  cursor: pointer;
+}
+.filter-sec-wraps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  label {
+    border-bottom: 1px solid rgb(197, 197, 197);
+    padding: 10px 0px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+.filter-selects {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #fff;
+}
+.inpt-wrap-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  span {
+    display: flex;
+    gap: 4px;
+    font-family: "Google Sans", sans-serif;
+    color: #666565;
+    input {
+      color: #666565;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .filter-and-products {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    z-index: 3;
+  }
+  .filterBtn {
+    position: absolute;
+    top: 0;
+    display: flex;
+  }
+  .filterHead {
+    display: none;
+  }
+  .filter-selects {
+    display: flex;
+    margin-top: 6%;
+    padding-top: 10px;
+    transform: translateX(-100%);
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+  .filter-selects.open {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+}

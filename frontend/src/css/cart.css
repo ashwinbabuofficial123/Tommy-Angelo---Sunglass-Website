@@ -1,0 +1,666 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
+.cart-container {
+  width: 100%;
+  height: 100%;
+}
+.text-wrap-cart-main {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-inline: 5.813vw;
+  padding-bottom: 24px;
+  padding-top: 6.25vw;
+  h1 {
+    font-family: "Gasoek One", sans-serif;
+    font-weight: 400;
+  }
+}
+.page-location {
+  display: flex;
+  gap: 6px;
+}
+.productwrp-checkout {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  gap: 32px;
+  padding: 0vw 5.813vw;
+}
+.cart-sect-wrap {
+  width: 100%;
+}
+.checkout-wrap {
+  width: 500px;
+  background-color: #faf9f9;
+  border-radius: 24px;
+  padding: 16px;
+  height: max-content;
+  color: #1a1a1a;
+  h1 {
+    font-family: "Gasoek One", sans-serif;
+    font-weight: 400;
+    padding: 0px 0px;
+  }
+}
+.total-sec-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #a0a0a0;
+}
+.total-sec-wrap .col-wrap {
+  display: flex;
+  justify-content: space-between;
+  span {
+    font-family: "Google Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  span:nth-child(2) {
+    font-weight: 600;
+  }
+}
+.col-wrap.--total {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+  span {
+    font-weight: 500;
+    font-family: "Google Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  span:nth-child(2) {
+    font-weight: 600;
+    font-size: 20px;
+  }
+}
+
+.cart-sect-wrap {
+  --cart-cols: minmax(0, 3fr) 1fr 1fr 1fr; /* Product | Price | Quantity | Total */
+  display: flex;
+  flex-direction: column;
+  background-color: #fcfcfc;
+  height: 800px;
+  overflow: scroll;
+  position: relative;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* Header */
+.title-wrp-cart {
+  display: grid;
+  grid-template-columns: var(--cart-cols);
+  align-items: center;
+  column-gap: 32px;
+  width: 100%;
+  padding: 24px 34px; /* match row padding + checkbox offset */
+  border-bottom: 1px solid rgb(248, 248, 248);
+  background-color: #ffffff;
+  border-radius: 16px 16px 0px 0px;
+  position: sticky;
+  top: 0; /* sticks to the top of the nearest scrolling ancestor */
+  z-index: 10;
+}
+.title-wrp-cart .title-box {
+  text-align: center;
+  text-transform: uppercase;
+  span {
+    font-family: "Google Sans", sans-serif;
+    font-weight: 500;
+  }
+}
+.title-wrp-cart .title-box--product {
+  text-align: left;
+  padding-left: 0;
+}
+
+/* Row */
+.cartCheck {
+  display: grid;
+  grid-template-columns: var(--cart-cols);
+  align-items: center;
+  column-gap: 32px;
+  background-color: #fff;
+  padding: 10px 24px;
+  border-bottom: 1px solid rgb(245, 243, 243);
+  position: relative;
+  .delete-wrap {
+    position: absolute;
+    bottom: 16px;
+    right: 24px;
+
+    button {
+      display: flex;
+      gap: 4px;
+      align-items: end;
+      font-size: 12px;
+      padding: 3px 6px;
+      border: none;
+      cursor: pointer;
+      background-color: #ffffff00;
+      font-family: "Google Sans", sans-serif;
+    }
+  }
+}
+
+/* Product cell */
+.cartProduct-wrp {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-width: 0; /* lets the grid column shrink */
+}
+.cartImg-wrp {
+  width: 160px; /* 300px was too wide for a table row */
+  flex-shrink: 0;
+  overflow: hidden;
+  img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.price--- {
+  font-family: "Google Sans", "sans-serif";
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+/* Other cells: center them under their headers */
+.price-wrp,
+.total-wrap-cart {
+  text-align: center;
+}
+.quantity {
+  justify-self: center; /* centers the pill in its column */
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 150px;
+  border: 1px solid rgb(170, 169, 169);
+  span {
+    font-family: "Google Sans", sans-serif;
+    font-weight: 500;
+  }
+  .btn-qty {
+    border: none;
+    padding: 10px 20px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: #fff;
+    font-family: "Google Sans", sans-serif;
+  }
+  .btn-qty:hover {
+    background-color: #6e6e6e;
+    color: #fff;
+  }
+}
+.cartText-wrp {
+  h2 {
+    text-transform: uppercase;
+    color: #1a1a1a;
+    font-family: "Google Sans", sans-serif;
+    font-weight: 600;
+    color: #2c2c2c;
+  }
+  p {
+    color: #6e6e6e;
+    font-family: "Google Sans", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
+.emptyCart {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 55px;
+  gap: 32px;
+  font-family: "Google Sans", sans-serif;
+  color: #c9c6c6;
+  background-color: #f1f0f0;
+  .cartEmpty {
+    color: #c9c6c6;
+    scale: 6;
+    margin: 55px;
+  }
+}
+.checkout-btn-wrp {
+  width: 100%;
+  margin-top: 32px;
+  cursor: pointer;
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-family: "Google Sans", sans-serif;
+    font-weight: 500;
+    background-color: #1a1a1a;
+    color: #ffff;
+    border: none;
+    width: 100%;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+}
+.trust-build-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  gap: 16px;
+}
+.trust-build-sec {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  span {
+    display: flex;
+    align-items: center;
+    font-family: "Google Sans", sans-serif;
+    font-size: 12px;
+  }
+}
+
+/* =====================================================================
+   RESPONSIVE LAYER (everything below is new; original code is above)
+   Needs in index.html <head>:
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   ===================================================================== */
+
+/* ---------- Fluid base (applies to every device) ---------- */
+.text-wrap-cart-main h1 {
+  font-size: clamp(1.75rem, 1.1rem + 2.6vw, 3.5rem);
+  line-height: 1.1;
+}
+.checkout-wrap h1 {
+  font-size: clamp(1.4rem, 1rem + 1.4vw, 2.25rem);
+}
+.price--- {
+  font-size: clamp(16px, 0.9rem + 0.7vw, 24px);
+}
+.cartText-wrp h2 {
+  font-size: clamp(14px, 0.8rem + 0.45vw, 20px);
+}
+.cartText-wrp p {
+  font-size: clamp(11px, 0.7rem + 0.15vw, 13px);
+}
+.title-wrp-cart .title-box span {
+  font-size: clamp(11px, 0.65rem + 0.3vw, 15px);
+}
+.quantity span {
+  font-size: clamp(13px, 0.8rem + 0.2vw, 16px);
+}
+.checkout-btn-wrp button {
+  font-size: clamp(14px, 0.85rem + 0.25vw, 17px);
+}
+
+/* ---------- ≥1920px : Full HD / 2K / 4K ---------- */
+@media (min-width: 1920px) {
+  .cart-container {
+    max-width: 1760px;
+    margin-inline: auto;
+  }
+  .checkout-wrap {
+    width: 540px;
+  }
+  .cartImg-wrp {
+    width: 190px;
+  }
+  .cart-sect-wrap {
+    height: 880px;
+  }
+}
+
+/* ---------- ≤1439px : laptops (1280, 1366, 1440 MacBook) ---------- */
+@media (max-width: 1439px) {
+  .productwrp-checkout {
+    gap: 24px;
+  }
+  .checkout-wrap {
+    width: 400px;
+  }
+  .cart-sect-wrap {
+    height: 740px;
+  }
+  .cartImg-wrp {
+    width: 140px;
+  }
+  .cartProduct-wrp {
+    gap: 18px;
+  }
+  .title-wrp-cart,
+  .cartCheck {
+    column-gap: 20px;
+  }
+}
+
+/* ---------- ≤1199px : iPad landscape (1024/1133/1180/1194) – stack layout ---------- */
+@media (max-width: 1199px) {
+  .productwrp-checkout {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .checkout-wrap {
+    width: 100%;
+    max-width: 100%;
+  }
+  .cart-sect-wrap {
+    height: auto;
+    max-height: 640px;
+  }
+  .text-wrap-cart-main {
+    padding-top: 9vw;
+  }
+  .cartImg-wrp {
+    width: 130px;
+  }
+}
+
+/* ---------- ≤1023px : iPad / iPad Air / iPad Pro portrait (768 – 1024) ---------- */
+@media (max-width: 1023px) {
+  .text-wrap-cart-main {
+    padding-inline: 4.5vw;
+    padding-top: 12vw;
+  }
+  .productwrp-checkout {
+    padding: 0 4.5vw;
+  }
+  .title-wrp-cart {
+    padding: 18px 24px;
+    column-gap: 16px;
+  }
+  .cartCheck {
+    padding: 12px 18px 38px; /* extra bottom room for the delete button */
+    column-gap: 16px;
+  }
+  .cartCheck .delete-wrap {
+    right: 18px;
+    bottom: 10px;
+  }
+  .cartImg-wrp {
+    width: 110px;
+  }
+  .cartProduct-wrp {
+    gap: 14px;
+  }
+  .quantity {
+    width: 120px;
+  }
+  .quantity .btn-qty {
+    padding: 8px 14px;
+  }
+  .total-sec-wrap {
+    margin-top: 20px;
+  }
+  .emptyCart {
+    font-size: clamp(26px, 5vw, 40px);
+    min-height: 420px;
+  }
+  .emptyCart .cartEmpty {
+    scale: 4;
+    margin: 40px;
+  }
+}
+
+/* ---------- ≤767px : large phones (landscape), small tablets, Fold ----------
+   Table turns into stacked "cards": product on top,
+   price / quantity / total on a row underneath. */
+@media (max-width: 767px) {
+  .cart-sect-wrap {
+    max-height: none;
+    overflow: visible;
+  }
+
+  /* header row is redundant once rows are cards */
+  .title-wrp-cart {
+    display: none;
+  }
+
+  .cartCheck {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 14px;
+    column-gap: 12px;
+    padding: 16px 16px 46px;
+    align-items: center;
+  }
+  .cartCheck .cartProduct-wrp {
+    grid-column: 1 / -1;
+  }
+  .cartCheck .delete-wrap {
+    left: 16px;
+    right: 16px;
+    bottom: 12px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* small captions so unlabeled values still make sense */
+  .cartCheck .price-wrp::before,
+  .cartCheck .total-wrap-cart::before {
+    display: block;
+    font-family: "Google Sans", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #6e6e6e;
+    margin-bottom: 2px;
+  }
+  .cartCheck .price-wrp::before {
+    content: "Price";
+  }
+  .cartCheck .total-wrap-cart::before {
+    content: "Total";
+  }
+
+  .cartImg-wrp {
+    width: clamp(96px, 26vw, 140px);
+  }
+  .quantity {
+    width: clamp(104px, 28vw, 130px);
+  }
+  .quantity .btn-qty {
+    padding: 8px 12px;
+  }
+
+  .checkout-wrap {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .total-sec-wrap {
+    gap: 14px;
+    margin-top: 18px;
+    padding-bottom: 18px;
+  }
+  .checkout-btn-wrp {
+    margin-top: 24px;
+  }
+  .checkout-btn-wrp button {
+    padding: 14px 16px;
+  }
+  .trust-build-wrap {
+    margin-top: 24px;
+    gap: 12px;
+  }
+  .emptyCart {
+    min-height: 360px;
+    gap: 20px;
+  }
+  .emptyCart .cartEmpty {
+    scale: 3;
+    margin: 30px;
+  }
+}
+
+/* ---------- ≤480px : Pixel, Galaxy S, iPhone Pro Max/Plus (412–430) ---------- */
+@media (max-width: 480px) {
+  .text-wrap-cart-main {
+    padding-inline: 16px;
+    padding-top: 88px;
+    padding-bottom: 16px;
+  }
+  .productwrp-checkout {
+    padding: 0 16px;
+    gap: 20px;
+  }
+  .page-location {
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+
+  .cartCheck {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  /* price | total on one line, quantity below */
+  .cartCheck .price-wrp {
+    order: 2;
+    text-align: left;
+  }
+  .cartCheck .total-wrap-cart {
+    order: 3;
+    text-align: right;
+  }
+  .cartCheck .quantity {
+    order: 4;
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+  .cartCheck .delete-wrap {
+    order: 5;
+  }
+
+  .cartProduct-wrp {
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .cartImg-wrp {
+    width: clamp(88px, 28vw, 120px);
+    border-radius: 8px;
+  }
+  .cartText-wrp h2 {
+    font-size: 14px;
+  }
+  .price--- {
+    font-size: 16px;
+  }
+
+  .checkout-wrap {
+    padding: 16px;
+    border-radius: 16px;
+  }
+  .col-wrap.--total span {
+    font-size: 14px;
+  }
+  .col-wrap.--total span:nth-child(2) {
+    font-size: 18px;
+  }
+  .total-sec-wrap .col-wrap span {
+    font-size: 11px;
+  }
+  .trust-build-sec span {
+    font-size: 11px;
+  }
+  .emptyCart {
+    min-height: 320px;
+    font-size: 22px;
+    text-align: center;
+    padding: 24px 16px;
+  }
+  .emptyCart .cartEmpty {
+    scale: 2.4;
+    margin: 24px;
+  }
+}
+
+/* ---------- ≤393px : iPhone 12–16, Pixel 7/8 ---------- */
+@media (max-width: 393px) {
+  .cartImg-wrp {
+    width: 92px;
+  }
+  .cartCheck {
+    padding: 14px 14px 44px;
+  }
+  .cartCheck .delete-wrap {
+    left: 14px;
+    right: 14px;
+  }
+}
+
+/* ---------- ≤360px : Galaxy S small, iPhone SE 1 (320), Fold cover screen ---------- */
+@media (max-width: 360px) {
+  .text-wrap-cart-main {
+    padding-inline: 12px;
+    padding-top: 80px;
+  }
+  .productwrp-checkout {
+    padding: 0 12px;
+  }
+  .cartProduct-wrp {
+    gap: 10px;
+  }
+  .cartImg-wrp {
+    width: 80px;
+  }
+  .cartText-wrp h2 {
+    font-size: 13px;
+  }
+  .cartText-wrp p {
+    font-size: 11px;
+  }
+  .quantity {
+    width: 108px;
+  }
+  .quantity .btn-qty {
+    padding: 6px 10px;
+  }
+  .checkout-wrap {
+    padding: 14px;
+  }
+  .checkout-btn-wrp button {
+    font-size: 14px;
+  }
+  .emptyCart {
+    font-size: 18px;
+  }
+  .emptyCart .cartEmpty {
+    scale: 2;
+  }
+}
+
+/* ---------- Short landscape phones (e.g. 667x375, 844x390, 932x430) ---------- */
+@media (max-height: 500px) and (orientation: landscape) {
+  .text-wrap-cart-main {
+    padding-top: 72px;
+  }
+  .cart-sect-wrap {
+    max-height: none;
+  }
+}
+
+/* ---------- Touch devices: bigger tap targets ---------- */
+@media (hover: none) and (pointer: coarse) {
+  .quantity .btn-qty {
+    min-height: 40px;
+    min-width: 40px;
+  }
+  .cartCheck .delete-wrap button {
+    padding: 8px 10px;
+  }
+  .quantity .btn-qty:hover {
+    background-color: #fff; /* avoid "stuck" hover color after tapping */
+    color: inherit;
+  }
+}

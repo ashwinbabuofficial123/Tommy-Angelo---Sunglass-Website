@@ -1,0 +1,17 @@
+.hover {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* hides the text while it's outside the box */
+  cursor: pointer;
+}
+
+.hover .text {
+  display: block;
+}
+
+/* second span sits on top of the first */
+.hover .second {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
