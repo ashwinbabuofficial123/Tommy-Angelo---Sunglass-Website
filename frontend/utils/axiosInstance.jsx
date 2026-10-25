@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:10000",
+  baseURL: "https://tommy-angelo-sunglass-website-1.onrender.com",
   timeout: 4000,
 });
 axiosInstance.interceptors.request.use((config) => {
