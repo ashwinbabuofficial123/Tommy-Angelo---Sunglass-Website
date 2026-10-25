@@ -1,7 +1,15 @@
+require("dotenv").config();
+const dns = require("node:dns");
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/tommy-angelo").then(() => {
-  console.log("Database Connected");
-});
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log("DATABASE CONNECTED");
+  } catch (error) {
+    console.log("DATABASE CONNECTION ERROR", error);
+  }
+};
 
-module.exports = mongoose;
+module.exports = connectDB;

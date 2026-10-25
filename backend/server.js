@@ -1,5 +1,5 @@
-require("./DB");
 require("dotenv").config();
+const connectDB = require("./DB");
 const cors = require("cors");
 const express = require("express");
 const PORT = process.env.PORT;
@@ -22,6 +22,7 @@ app.use(cartRoute);
 app.use(orderRoute);
 app.use(wishlistRoute);
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
+  await connectDB();
   console.log(`Server is running at http://localhost:${PORT}`);
 });
