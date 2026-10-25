@@ -17,7 +17,7 @@ import oakleycover from "../assets/images/Oakley.webp";
 import guccicover from "../assets/images/gucci.png";
 import raybanSide from "../assets/images/RaybanSide.png";
 import LoginCard from "../components/loginCard";
-import brandLogo from "../assets/images/brandlogo.png";
+import brandLogo from "../assets/images/brandLogo.png";
 import heroImage from "../assets/images/HeroImage.png";
 import heroRes from "../assets/images/ResponsiveImage.png";
 import Button from "../components/button";
